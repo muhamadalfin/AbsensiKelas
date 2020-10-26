@@ -79,7 +79,7 @@ public class Hasil extends Fragment {
                     .append(waktu.getHari())
                     .append("\r")
                     .append("Tanggal")
-                    .append(waktu.getTgl())
+                    .append(waktu.getStatus())
                     .append("\n");
         }
         return builder.toString();
@@ -95,19 +95,19 @@ public class Hasil extends Fragment {
                     .append(waktu.getHari())
                     .append("\r")
                     .append("Tanggal")
-                    .append(waktu.getTgl())
+                    .append(waktu.getStatus())
                     .append("\n");
         }
         return builder.toString();
     }
 
     public void onAddHomeClick(View view) {
-        HasilDirections.waktuAction action = HasilDirections.waktuAction(MHS_REQUEST_KEY);
+        HasilDirections.ActionHasilToAbsen action = HasilDirections.actionHasilToAbsen(MHS_REQUEST_KEY);
         Navigation.findNavController(view).navigate(action);
     }
 
     public void onAddAwayClick(View view) {
-        HasilDirections.GoalScorerAction action = ScoreFragmentDirections.goalScorerAction(AWAY_REQUEST_KEY);
+        HasilDirections.ActionHasilToAbsen action = HasilDirections.actionHasilToAbsen(DS_REQUEST_KEY);
         Navigation.findNavController(view).navigate(action);
     }
 }

@@ -17,6 +17,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         tools:context=".fragment.Absen">
 
         <androidx.constraintlayout.widget.Guideline
@@ -30,8 +32,10 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
             android:text="Name"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.363"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,39 +43,61 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Hari"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.311"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_name" />
+
+        <TextView
+            android:id="@+id/form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="ISI FORM KEHADIRAN"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="307dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={waktu.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/form" />
+
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanggal"
+            android:layout_marginTop="20dp"
+            android:entries="@array/status"
+            android:text="Status"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.38"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_hari" />
-
-        <EditText
-            android:id="@+id/input_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="@={waktu.name}"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/input_hari"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:ems="10"
-            android:text="@={`` + waktu.hari}"
             android:inputType="textPersonName"
+            android:text="@={waktu.hari}"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/input_name" />
 
@@ -79,10 +105,12 @@
             android:id="@+id/input_tgl"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:ems="10"
-            android:text="@={`` + waktu.tgl}"
-            android:inputType="date"
+            android:inputType="textPersonName"
+            android:text="@={waktu.status}"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/input_hari" />
 
@@ -118,5 +146,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

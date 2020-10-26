@@ -9,15 +9,15 @@ public class Waktu implements Parcelable {
 
     private String name;
     private String hari;
-    private Date tgl;
+    private String status;
 
     public Waktu() {
     }
 
-    public Waktu(String name, String hari, Date tgl) {
+    public Waktu(String name, String hari, String status) {
         this.name = name;
         this.hari = hari;
-        this.tgl = tgl;
+        this.status = status;
     }
 
     public String getName() {
@@ -36,14 +36,13 @@ public class Waktu implements Parcelable {
         this.hari = hari;
     }
 
-    public Date getTgl() {
-        return tgl;
+    public String getStatus() {
+        return status;
     }
 
-    public void setTgl(Date tgl) {
-        this.tgl = tgl;
+    public void setStatus(String status) {
+        this.status = status;
     }
-
 
     @Override
     public int describeContents() {
@@ -54,14 +53,13 @@ public class Waktu implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
         dest.writeString(this.hari);
-        dest.writeLong(this.tgl != null ? this.tgl.getTime() : -1);
+        dest.writeString(this.status);
     }
 
     protected Waktu(Parcel in) {
         this.name = in.readString();
         this.hari = in.readString();
-        long tmpTgl = in.readLong();
-        this.tgl = tmpTgl == -1 ? null : new Date(tmpTgl);
+        this.status = in.readString();
     }
 
     public static final Creator<Waktu> CREATOR = new Creator<Waktu>() {
@@ -75,4 +73,13 @@ public class Waktu implements Parcelable {
             return new Waktu[size];
         }
     };
+
+    @Override
+    public String toString() {
+        return "GoalScorer{" +
+                "name='" + name + '\'' +
+                ", hari=" + hari + + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }
