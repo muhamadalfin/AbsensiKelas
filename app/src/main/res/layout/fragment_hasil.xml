@@ -116,15 +116,14 @@
 
         <TextView
             android:id="@+id/text_ds"
-            android:layout_width="231dp"
-            android:layout_height="31dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="188dp"
             android:text="@{String.valueOf(dosenWaktuList.size())}"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/button_add_dosen"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.559"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -139,7 +138,7 @@
 
         <TextView
             android:id="@+id/text_away_scorer"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@{fragment.dosen()}"
@@ -152,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="84dp"
+            android:layout_marginTop="88dp"
             android:layout_marginEnd="54dp"
             android:text="Mahasiswa Hadir"
             android:textSize="20sp"
@@ -166,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="31dp"
             android:layout_marginEnd="107dp"
             android:text="Dosen Hadir"
             android:textSize="20sp"

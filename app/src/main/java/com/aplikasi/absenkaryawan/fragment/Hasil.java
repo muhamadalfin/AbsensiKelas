@@ -72,13 +72,13 @@ public class Hasil extends Fragment {
     public String mahasiswa(){
         StringBuilder builder = new StringBuilder();
         for (Waktu waktu : mahasiswaWaktuList){
-            builder.append("nama :")
+            builder.append("nama : ")
                     .append(waktu.getName())
                     .append("\r")
-                    .append("Hari")
+                    .append("Hari : ")
                     .append(waktu.getHari())
                     .append("\r")
-                    .append("Tanggal")
+                    .append("Status : ")
                     .append(waktu.getStatus())
                     .append("\n");
         }
@@ -88,13 +88,13 @@ public class Hasil extends Fragment {
     public String dosen(){
         StringBuilder builder = new StringBuilder();
         for (Waktu waktu : dosenWaktuList){
-            builder.append("nama :")
+            builder.append("nama : ")
                     .append(waktu.getName())
                     .append("\r")
-                    .append("Hari")
+                    .append("Hari : ")
                     .append(waktu.getHari())
                     .append("\r")
-                    .append("Tanggal")
+                    .append("Status : ")
                     .append(waktu.getStatus())
                     .append("\n");
         }
